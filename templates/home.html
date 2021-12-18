@@ -14,8 +14,8 @@
 <style>
     .square {
         border: black 2px solid;
-        width: 30px;
-        height: 30px;
+        width: 15px;
+        height: 15px;
         background-color: #a0a8bc;
         opacity: 0.5;
     }
@@ -36,10 +36,18 @@
     <div id="board" style="display: flex;flex-direction: column" ondragstart="return false;" ondrop="return false;">
 
     </div>
+    <button class="btn btn-danger" onclick="reset_sq()">Reset</button>
+    <button class="btn btn-primary" onclick="submit_sq()">Submit</button>
+    <h2>result is :<span id="result">?</span></h2>
 
 </div>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 <script>
+    let result = []
+    for (let i = 0; i < 784; i++) {
+        result.push(0)
+    }
     let isMousePressed = false;
 
     document.querySelector('body').addEventListener('mousedown', () => {
@@ -55,6 +63,7 @@
         if (isMousePressed) {
             let sq = document.getElementById('sq' + i)
             sq.style.backgroundColor = 'black'
+            result[i]=1
         }
 
 
@@ -66,17 +75,56 @@
     }
     let block = (i) => {
         let tmp = '<div class="block">'
-        for (let j = 0; j < 24; j++) {
-            tmp += square(j + 24 * i)
+        for (let j = 0; j < 28; j++) {
+            tmp += square(j + 28 * i)
         }
         tmp += '</div>'
         return tmp
     }
-    for (let i = 0; i < 24; i++) {
+    for (let i = 0; i < 28; i++) {
         board.innerHTML += block(i)
     }
 
 
+    function submit_sq() {
+        let data = new FormData()
+        let tmpStr = ''
+        result.forEach((val) => {
+            tmpStr += val
+        })
+        data.append("csrfmiddlewaretoken", '{{csrf_token}}')
+        data.append('digit', tmpStr)
+
+        document.getElementById('result').innerText = 'waiting for response'
+        axios.post('process', data)
+            .then(res => {
+                if (res.status !== 200) {
+
+                } else {
+                    document.getElementById('result').innerText = res.data
+                }
+            })
+            .catch(errors => {
+                    console.log(errors)
+                    errors.document.getElementById('result').innerText = 'error'
+                }
+            )
+
+
+    }
+
+    function reset_sq() {
+        result = []
+        for (let i = 0; i < 784; i++) {
+            result.push(0)
+        }
+        let tmp = document.getElementsByClassName('square')
+        tmp = Object.values(tmp)
+        tmp.forEach((sq) => {
+            sq.style.backgroundColor = '#a0a8bc'
+        })
+
+    }
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
@@ -84,3 +132,4 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
+
