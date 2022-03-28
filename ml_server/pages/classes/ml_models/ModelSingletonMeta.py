@@ -9,4 +9,4 @@ class ModelSingletonMeta(type):
         if cls._instance is None:
             instance = super().__call__(*args, **kwargs)
             cls._instance = instance
-        return cls._instance.model
+        return cls._instance

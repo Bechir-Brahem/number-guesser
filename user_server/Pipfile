@@ -5,12 +5,6 @@ name = "pypi"
 
 [packages]
 django = "==3.2"
-joblib = "*"
-sklearn = "*"
-tensorflow = "*"
-keras = "*"
-lightgbm = "*"
-django-cors-headers = "*"
 
 [dev-packages]
 

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "d9a6d75706ee7f0c9266aa5f3586008234f397cb7df9a2115656c33cc651fe95"
+            "sha256": "b2950be60e8c7746a71401b3bb625bb22d4f3e4afc317baa28d230653b2890e0"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -69,6 +69,14 @@
             ],
             "index": "pypi",
             "version": "==3.2"
+        },
+        "django-cors-headers": {
+            "hashes": [
+                "sha256:a22be2befd4069c4fc174f11cf067351df5c061a3a5f94a01650b4e928b0372b",
+                "sha256:eb98389bf7a2afc5d374806af4a9149697e3a6955b5a2dc2bf049f7d33647456"
+            ],
+            "index": "pypi",
+            "version": "==3.11.0"
         },
         "flatbuffers": {
             "hashes": [
@@ -201,6 +209,7 @@
             "hashes": [
                 "sha256:744d39dc6577dcd80ff4a4d41549e92b77d6a17e0edd58a431d30656e29bc94e"
             ],
+            "index": "pypi",
             "version": "==2.8.0"
         },
         "keras-preprocessing": {
@@ -222,6 +231,17 @@
                 "sha256:dfcdfc90eeb5d14f291e31c19b195fbcc29a8c0b2bd29fa331011f9536937a89"
             ],
             "version": "==13.0.0"
+        },
+        "lightgbm": {
+            "hashes": [
+                "sha256:2e94bd1b3ab29d173102c9c1d80db2e27ad7e43b8ff5a74c5cb7984b37d19f45",
+                "sha256:5d25d16e77c844c297ece2044df57651139bc3c8ad8c4108916374267ac68b64",
+                "sha256:8e788c56853316fc5d35db726d81bd002c721038c856853952287f68082e0158",
+                "sha256:e4f1529cad416066964f9af0efad208787861e9f2181b7f9ee7fc9bacc082d4f",
+                "sha256:f4cba3b4f29336ad7e801cb32d9b948ea4cc5300dda650b78bcdfe36b3e2c4b2"
+            ],
+            "index": "pypi",
+            "version": "==3.3.2"
         },
         "markdown": {
             "hashes": [
@@ -441,11 +461,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:89eef7b71423ab7fccc7dfafdc145410ef170c4a89567427f932448135e08cdf",
-                "sha256:92b15f45ab164eb0c410d2bf661a6e9d15e3b78c0dffb0325f2bf0f313071cae"
+                "sha256:8f4813dd6a4d6cc17bde85fb2e635fe19763f96efbb0ddf5575562e5ee0bc47a",
+                "sha256:c3d4e2ab578fbf83775755cd76dae73627915a22832cf4ea5de895978767833b"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==61.1.1"
+            "version": "==61.2.0"
         },
         "six": {
             "hashes": [

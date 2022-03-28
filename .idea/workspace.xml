@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="babe6469-b2ba-4e38-8096-8a58f283fb2a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/number-guesser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/number-guesser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_guesser/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_guesser/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_guesser/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_guesser/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/number_guesser/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/MlModelFactory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/ml_models/ModelSingletonMeta.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/ml_models/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/ml_models/rf/MlModel.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/classes/ml_models/rf/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" />
-    </list>
+    <list default="true" id="babe6469-b2ba-4e38-8096-8a58f283fb2a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,6 +23,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user_server" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -66,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648420395226</updated>
       <workItem from="1648420399105" duration="360000" />
+      <workItem from="1648422125169" duration="26000" />
     </task>
     <servers />
   </component>

@@ -1,13 +1,10 @@
-from django.http import HttpResponse
-from django.views.generic import TemplateView
+from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_exempt
 
 import pages.classes.MlModelFactory as MlFactory
 
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
-
-
+@csrf_exempt
 def process(request):
     try:
         model = MlFactory.getModel(request.POST.get('model'))
@@ -21,6 +18,12 @@ def process(request):
     if len(digit) != 784:
         return HttpResponse('invalid number', status=400)
 
-    return HttpResponse(model.predict([digit])[0])
+    return HttpResponse(int(model.predict(digit)))
+
+
+@csrf_exempt
+def listModels(request):
+    model_names = MlFactory.getModelNames()
+    return JsonResponse(model_names)
 
 # Create your views here.

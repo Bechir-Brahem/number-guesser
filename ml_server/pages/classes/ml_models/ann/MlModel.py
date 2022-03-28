@@ -4,14 +4,15 @@ huge performance gain
 """
 import os.path
 from pathlib import Path
-import tensorflow.keras as keras
 
-import joblib
+import keras
+import numpy as np
 
+from pages.classes.ml_models.ModelDL import ModelDL
 from pages.classes.ml_models.ModelSingletonMeta import ModelSingletonMeta
 
 
-class MlModel(metaclass=ModelSingletonMeta):
+class MlModel(ModelDL,metaclass=ModelSingletonMeta):
     """
     metaclass singleton.
     must define:
@@ -21,5 +22,7 @@ class MlModel(metaclass=ModelSingletonMeta):
     """
 
     def __init__(self):
-        self.model_name = os.path.dirname(os.path.realpath(__file__))
-        self.model = keras.models.load_model(os.path.join(Path(__file__).resolve().parent, self.model_name))
+        self.full_name='ANN'
+        self.model_name = os.path.basename(os.path.dirname(os.path.realpath(__file__)))
+        self.model = keras.models.load_model(os.path.join(Path(__file__).resolve().parent, self.model_name + '.h5'))
+
