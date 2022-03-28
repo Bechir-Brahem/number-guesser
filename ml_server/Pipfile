@@ -9,7 +9,9 @@ joblib = "*"
 sklearn = "*"
 tensorflow = "*"
 keras = "*"
-lightgbm = "*"
+# lightgbm = "*"
+gunicorn="*"
+sqlparse="*"
 django-cors-headers = "*"
 
 [dev-packages]

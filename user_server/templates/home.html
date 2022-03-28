@@ -55,10 +55,11 @@
 <script>
     let result = []
     let isMousePressed = false;
+    let ml_server='http://ml-server.westeurope.cloudapp.azure.com/'
     let board = document.getElementById("board")
 
     function init() {
-        axios.get('http://localhost:5000/list')
+        axios.get(ml_server+'list')
             .then(res => {
                 console.log(res.data)
                 let data;
@@ -143,7 +144,7 @@
         data.append('model', document.getElementById('model-selector').value)
 
         document.getElementById('result').innerText = 'waiting for response'
-        axios.post('http://localhost:5000/process', data)
+        axios.post(ml_server+'process', data)
             .then(res => {
                 if (res.status !== 200) {
 
