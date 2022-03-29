@@ -55,7 +55,7 @@
 <script>
     let result = []
     let isMousePressed = false;
-    let ml_server='http://ml-server.westeurope.cloudapp.azure.com/'
+    let ml_server='https://ml-server.westeurope.cloudapp.azure.com/'
     let board = document.getElementById("board")
 
     function init() {
@@ -73,6 +73,9 @@
                         let option = document.createElement("option")
                         option.text = data[ref]
                         option.value = ref
+                            if(ref==='cnn_mcd'){
+                                    option.selected=true
+                                }
                         selector.add(option)
                     }
                 }
