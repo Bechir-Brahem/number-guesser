@@ -73,6 +73,9 @@
                         let option = document.createElement("option")
                         option.text = data[ref]
                         option.value = ref
+                            if(ref==='cnn_mcd'){
+                                    option.selected=true
+                                }
                         selector.add(option)
                     }
                 }
