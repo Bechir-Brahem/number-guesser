@@ -5,15 +5,9 @@ name = "pypi"
 
 [packages]
 django = "==3.2"
-joblib = "*"
-sklearn = "*"
-tensorflow = "*"
-keras = "*"
-lightgbm = "*"
-django-cors-headers = "*"
 gunicorn = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3"
+python_version = "3.10"
